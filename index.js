@@ -3,9 +3,11 @@ import fs from "fs";
 //const express = require("express"); // this is ok if the "type" : "module" is not in the package json file
 // else
 import express from "express";
+import "dotenv/config";
+
 const app = express();
 
-const port = 8000;
+const port = process.env.PORT || 3000;
 
 // app.get("/", (req, res) => {
 //   res.send("Hello World")
